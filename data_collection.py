@@ -492,12 +492,12 @@ def main(mode):
 			save_obj(all_players, "all_players_list")
 	else:
 		print "invalid mode"
-		exit()
+		sys.exit()
 
 if __name__ == '__main__':
 	if len(sys.argv) < 2:
 		print "Usage: data_collection.py (-players | -teams)"
-		exit()
+		sys.exit()
 
 	mode = -1
 	if sys.argv[1] == "-teams":
@@ -506,6 +506,6 @@ if __name__ == '__main__':
 		mode = 1
 	else:
 		print "Usage: data_collection.py (-players | -teams)"
-		exit()
+		sys.exit()
 
 	main(mode)
